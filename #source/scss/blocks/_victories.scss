@@ -1,0 +1,182 @@
+.post-content {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+
+   margin-bottom: 66px;
+
+   @media (min-width:1200px) {
+      justify-content: space-between;
+   }
+}
+
+.post {
+
+   @media (max-width:$md2+px) {
+      margin-bottom: 30px;
+   }
+
+   display: flex;
+   flex-direction: column;
+   box-shadow: 1px 23px 57px rgba(83, 84, 104, 0.1);
+
+   @media (min-width:$md4+px) {
+      width: 47%;
+      flex: 0 1 47%;
+   }
+
+   @media (min-width:$md2+px) {
+      width: 30%;
+      flex: 0 1 30%;
+   }
+
+   &__btn {
+      border: 1px solid #017fbc;
+      color: #017fbc;
+      font-family: "SF UI Display";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 36px;
+      text-transform: uppercase;
+      padding: 0 40px;
+      margin-right: 17px;
+   }
+}
+
+
+.post-description {
+   padding: 24px 15px 24px 20px;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+
+   @media (min-width:$md2+px) {
+      padding: 56px 15px 56px 40px;
+   }
+}
+
+.post-title {
+   margin-bottom: 34px;
+   flex-grow: 1;
+
+   &__text {
+      color: #041e44;
+      @include adaptiv-font(24, 18);
+      font-weight: 700;
+      line-height: 22px;
+
+      @media (min-width:$md3+px) {
+         line-height: 36px;
+         margin-bottom: 52px;
+      }
+   }
+}
+
+.post-bottom {
+   display: flex;
+   position: relative;
+}
+
+.post-sharing {
+   width: 37px;
+   height: 37px;
+   cursor: pointer;
+   @include anim(0.3s, 0s);
+
+   &__icon {
+      background: url(../img/post/sharing-icon.svg) 0 0 no-repeat;
+      background-size: contain;
+      height: 100%;
+      display: block;
+   }
+
+   &.active {
+      background-color: #999;
+      border-radius: 50%;
+
+      .post-sharing__icon {
+         transform: scale(0.5);
+      }
+   }
+
+   &__popup {
+      position: absolute;
+      right: 0;
+      top: -55px;
+      background-color: #dfe5e8;
+      padding: 15px 35px;
+      border-radius: 25px;
+      margin-bottom: -10px;
+      opacity: 0;
+      visibility: hidden;
+      @include anim(0.5s, 0s);
+
+      &:after {
+         content: '';
+         position: absolute;
+         bottom: -7px;
+         left: 47%;
+         width: 20px;
+         height: 20px;
+         background-color: #dfe5e8;
+         transform: rotate(45deg);
+
+         @media (max-width:$md3+px) {
+            left: 78%;
+         }
+      }
+
+      &.active {
+         margin-bottom: 0;
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+}
+
+.sharing-socials {
+
+   &__item {
+      margin-right: 8px;
+      color: #99a9b5;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      &:hover {
+         .pinterest {
+            color: #ff5757;
+
+         }
+
+         .facebook {
+            color: #4e64b5;
+         }
+
+         .twitter {
+            color: #00aced;
+         }
+
+         .google-plus {
+            color: #f44336;
+         }
+
+         .tumblr {
+            color: #456988;
+         }
+
+         .linkedin {
+            color: #0288d1;
+         }
+
+         .stumbleupon {
+            color: #46485c;
+         }
+      }
+   }
+}
+
+.socials-item-icon {
+   @include anim(0.5s, 0s);
+}

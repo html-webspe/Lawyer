@@ -1,0 +1,49 @@
+.problems__body {
+
+   @media (min-width:$md3+px) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+   }
+}
+
+.problems__item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 3px solid #ebecee;
+   padding: 44px 25px 59px 25px;
+
+   @media (max-width:$md2+px) {
+      margin-bottom: 30px;
+   }
+
+   @media (min-width:1300px) {
+
+      width: 321px;
+      flex: 0 1 321px;
+   }
+
+   &-icon {
+      width: 71px;
+      height: 71px;
+      margin-bottom: 15px;
+
+      @media (min-width:1400px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &-text {
+
+      color: #041e44;
+      @include adaptiv-font(20, 14);
+      line-height: 26px;
+      font-weight: bold;
+      text-align: center;
+
+      @media (min-width:$md3+px) {
+         max-width: 174px;
+      }
+   }
+}

@@ -1,0 +1,87 @@
+.section-callback {
+   padding: 64px 0;
+   background: url(../img/callback/callback-bg.jpg) 0 0 no-repeat;
+   background-size: cover;
+   margin-bottom: 0;
+
+   &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+      background-color: #262837;
+      opacity: 0.24;
+   }
+}
+
+.callback {
+
+   &__body {
+      @media (min-width:$md3+px) {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         position: relative;
+      }
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: 0;
+         width: 100%;
+         left: 0;
+         height: 445px;
+         background-color: #49556d;
+         opacity: 0.85;
+         z-index: 0;
+
+         @media (min-width:$md3+px) {
+            top: 50%;
+            transform: translateY(-50%);
+         }
+      }
+   }
+
+   &__content {
+      z-index: 1;
+      position: relative;
+
+      @media (min-width:$md3+px) {
+         padding: 0 18px;
+         max-width: 707px;
+         flex: 0 1 707px;
+      }
+
+      @media (min-width:1200px) {
+         padding-left: 58px;
+      }
+   }
+
+   &__text {
+      @include adaptiv-font(20, 16);
+      line-height: 20px;
+
+      @media (min-width:$md2+px) {
+         line-height: 30px;
+      }
+
+      @media (max-width:$md2+px) {
+         margin-bottom: 30px;
+      }
+
+   }
+
+}
+
+.callback-title {
+   color: #ffffff;
+   @include adaptiv-font(42, 24);
+   line-height: 28px;
+   text-align: left;
+
+   @media (min-width:$md2+px) {
+      line-height: 56px;
+   }
+}

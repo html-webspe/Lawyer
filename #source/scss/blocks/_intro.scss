@@ -1,0 +1,131 @@
+.intro {
+   height: calc(100vh - 49px);
+   width: 100%;
+
+   position: relative;
+   margin-bottom: 120px;
+   background-image: url(../img/intro/intro-bg.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   &:before {
+      content: '';
+      background-image: url(../img/grid-bg.svg);
+      background-position: right top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+   }
+
+}
+
+.intro-table {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+
+.intro-row {
+   display: table-row;
+}
+
+.intro-cell {
+   display: table-cell;
+   vertical-align: middle;
+}
+
+.intro {
+
+   &__content {
+      max-width: 880px;
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+   }
+
+   &__heading {
+      @include adaptiv-font(75, 28);
+      font-weight: bold;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 33px;
+
+      @media (min-width:$md4+px) {
+         line-height: 75px;
+      }
+
+      @media (min-width:1200px) {
+         line-height: 105px;
+      }
+   }
+
+   &__text {
+      @include adaptiv-font(30, 16);
+      line-height: 20px;
+      margin-bottom: 70px;
+
+
+      @media (min-width:$md3+px) {
+         line-height: 40px;
+      }
+   }
+}
+
+.intro {
+   &__btn {
+      @include adaptiv-font(30, 14);
+      color: #ffffff;
+      font-family: "SF UI Display";
+      font-weight: 700;
+      display: block;
+      padding: 42px 0 42px 0;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.75px;
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background-color: #017fbc;
+         z-index: -1;
+
+         @media (min-width:$md4+px) {
+            left: -16%;
+         }
+
+         @media (min-width:$md2+px) {
+            left: -38%;
+         }
+      }
+
+
+      &:hover {
+         .intro__btn-icon {
+            transform: translateX(30px);
+         }
+      }
+   }
+
+   &__btn-inner {
+      display: flex;
+   }
+
+   &__btn-icon {
+      background: url(../img/icons/intro-btn-icon.svg) 0 0 no-repeat;
+      background-size: contain;
+      width: 60px;
+      margin-left: 40px;
+      @include anim(0.7s, 0s);
+
+   }
+}

@@ -1,0 +1,77 @@
+//<FORM>====================================================================================================
+.form {
+  padding: 40px 25px;
+  background-color: #fff;
+
+  z-index: 1;
+  position: relative;
+
+  @media (min-width:1200px) {
+    padding: 65px 42px 84px 42px;
+    margin-right: 90px;
+    max-width: 476px;
+    flex: 0 1 476px;
+  }
+
+  &__btn {
+    @include button-reset;
+    color: #ffffff;
+    font-family: "SF UI Display";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    background-color: #daa772;
+    padding: 0 50px;
+    letter-spacing: 0.7px;
+  }
+}
+
+.form-row {
+  @include flexbox();
+}
+
+.form__column {
+  padding: 0px 15px;
+}
+
+.form-input {
+  border-bottom: 2px solid #daa772;
+  margin-bottom: 42px;
+}
+
+.form-button {}
+
+//</FORM>====================================================================================================
+
+//<INPUT>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 16px 20px;
+  color: #585d70;
+  font-family: "SF UI Display";
+  font-size: 18px;
+  line-height: 30px;
+
+  &.focus {}
+
+  &.err {}
+}
+
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}
+
+//</INPUT>====================================================================================================

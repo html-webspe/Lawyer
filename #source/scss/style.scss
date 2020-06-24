@@ -1,0 +1,201 @@
+//<МИКСИНЫ>===============================================================================================
+@import "ui/_mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import "ui/_fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "SF UI Display";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1570;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 576.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "ui/_null";
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+body {
+  color: #ffffff;
+  @include adaptiv-font(18, 14);
+  font-weight: normal;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  &.loaded {}
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width:1600px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1600px;
+  }
+}
+
+.container-sm {
+  max-width: 1300px;
+
+  @media (min-width:1600px) {
+    max-width: 1330px;
+  }
+}
+
+.top-area {
+  background-color: #1b1e2e;
+  padding: 15px 0px 18px 0px;
+  color: #99a9b5;
+  text-align: right;
+  @include adaptiv-font(18, 14);
+  margin-bottom: -1px;
+}
+
+.top-contacts-adress {
+  margin-right: 33px;
+
+  @media (max-width:$md4+px) {
+    margin-right: 0;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width:$md2+px) {
+    margin-right: 93px;
+  }
+}
+
+
+.bg {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262837;
+    opacity: 0.72;
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+  position: relative;
+
+  @media (min-width:$md2+px) {
+    margin-bottom: 120px;
+  }
+}
+
+.section-title {
+  color: #041e44;
+  @include adaptiv-font(42, 24);
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width:$md2+px) {
+    line-height: 62px;
+    margin-bottom: 62px;
+  }
+}
+
+.load-more-button {
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  span {
+    height: 3px;
+    background-color: #e6e7ec;
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.scroll {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  padding: 12px 0 !important;
+  z-index: 111;
+  opacity: 0.95;
+  background: #1b1e2e;
+  @include anim(0.3s, 0s);
+
+  .content-header__text,
+  .content-header__link,
+  .content-header__right-text {
+    display: none;
+    visibility: hidden;
+  }
+
+  .site-header__content {
+    align-items: center;
+  }
+
+  .site-logo {
+    img {
+      max-width: 66px;
+    }
+  }
+}
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+@import "_vars";
+@import "ui/_ui";
+@import "ui/_forms";
+@import "ui/_btn";
+@import "ui/_up";
+
+@import "blocks/_header";
+@import "blocks/_intro";
+@import "blocks/_section-problems";
+@import "blocks/_solve";
+@import "blocks/_advantages";
+@import "blocks/_important";
+@import "blocks/_partners";
+@import "blocks/_victories";
+@import "blocks/_callback";
+
+@import "blocks/_footer";
+@import "blocks/_popup";

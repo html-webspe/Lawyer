@@ -1,0 +1,49 @@
+//<BUTTONS>====================================================================================================
+.btn {
+   display: inline-flex;
+   padding: 0px 65px;
+   color: #ffffff;
+   font-family: "SF UI Display";
+   @include adaptiv-font(18, 14);
+   font-weight: 400;
+   line-height: 48px;
+   text-transform: uppercase;
+   background-color: #017fbc;
+   position: relative;
+   overflow: hidden;
+
+   @media (min-width:$md2+px) {
+      line-height: 62px;
+
+   }
+
+   @media (max-width:$md4+px) {
+      padding: 0px 25px;
+   }
+
+   &:after {
+      content: "";
+      background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+      height: 85px;
+      width: 50px;
+      position: absolute;
+      top: -8px;
+      left: -105px;
+      transform: skewX(-45deg);
+   }
+
+   &:hover {
+      &:after {
+         left: 350px;
+         transition: .5s ease-in-out;
+      }
+   }
+
+   &.fw {
+      width: 100%;
+   }
+}
+
+.load-more__btn {}
+
+//</BUTTONS>====================================================================================================

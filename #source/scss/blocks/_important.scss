@@ -1,0 +1,29 @@
+.section-important {
+   min-height: 467px;
+   background: url(../img/callback-bg.jpg) 0 0 no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.important-body {
+   text-align: center;
+}
+
+.important-title {
+   color: #ffffff;
+   @include adaptiv-font(36, 24);
+   margin-bottom: 30px;
+}
+
+.important-text {
+   @include adaptiv-font(24, 14);
+   line-height: 18px;
+   margin-bottom: 32px;
+
+   @media (min-width:$md2+px) {
+      line-height: 62px;
+      margin-bottom: 62px;
+   }
+}
