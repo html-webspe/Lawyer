@@ -756,6 +756,9 @@ font-family: "FontAwesome";
   @media (min-width: 767.98px) {
     .intro__btn {
       font-size: calc(14px + 16*(100vw / 1903)); } }
+  @media (max-width: 576.98px) {
+    .intro__btn {
+      padding: 22px 0 22px 0; } }
   .intro__btn:after {
     content: '';
     position: absolute;
@@ -765,6 +768,11 @@ font-family: "FontAwesome";
     width: 100%;
     background-color: #017fbc;
     z-index: -1; }
+    @media (max-width: 576.98px) {
+      .intro__btn:after {
+        left: 6px;
+        height: 100%;
+        width: 96%; } }
     @media (min-width: 576.98px) {
       .intro__btn:after {
         left: -16%; } }
@@ -791,6 +799,9 @@ font-family: "FontAwesome";
   -ms-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s; }
+  @media (max-width: 576.98px) {
+    .intro__btn-icon {
+      margin: 0 40px; } }
 
 @media (min-width: 767.98px) {
   .problems__body {
