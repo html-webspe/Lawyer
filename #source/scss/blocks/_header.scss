@@ -9,7 +9,13 @@
    padding-top: 52px;
 }
 
-
+.content-header__left {
+   animation: moveLeft 1s ease 0.5s forwards;
+   opacity: 0;
+   position: relative;
+   left: -300px;
+   transform: scale(0);
+}
 
 .site-header {
 
@@ -50,6 +56,8 @@
       font-weight: 400;
       letter-spacing: 0.8px;
       text-align: right;
+      opacity: 0;
+      animation: opacity 1s ease 2s forwards;
 
       @media (max-width:$md3+px) {
          display: none;
@@ -65,8 +73,12 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      position: relative;
       margin: 0px 66px 0px 35px;
       justify-content: space-around;
+      animation: moveTop 1s ease 1s forwards;
+      top: -500px;
+      opacity: 0;
 
       @media (max-width:$md3+px) {
          display: none;
@@ -91,10 +103,6 @@
       }
    }
 }
-
-.site-logo {}
-
-
 
 .header-menu__icon {
    display: block;
@@ -150,6 +158,21 @@
             bottom: 16px;
          }
       }
+   }
+}
+
+@keyframes moveLeft {
+   to {
+      opacity: 1;
+      left: 0;
+      transform: scale(1);
+   }
+}
+
+@keyframes moveTop {
+   to {
+      opacity: 1;
+      top: 0;
    }
 }
 
