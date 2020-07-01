@@ -754,10 +754,11 @@ font-family: "FontAwesome";
   vertical-align: middle; }
 
 .intro__content {
-  max-width: 880px;
+  max-width: 860px;
   color: #ffffff;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  margin-top: 150px; }
 
 .intro__heading {
   font-weight: bold;
@@ -1409,16 +1410,17 @@ font-family: "FontAwesome";
   padding: 64px 0;
   background: url(../img/callback/callback-bg.jpg) 0 0 no-repeat;
   background-size: cover;
-  margin-bottom: 0; }
-  .section-callback:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 100%;
-    background-color: #262837;
-    opacity: 0.64; }
+  margin-bottom: 0;
+  /*&:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+      background-color: #262837;
+      opacity: 0.64;
+   }*/ }
 
 @media (min-width: 767.98px) {
   .callback__body {
