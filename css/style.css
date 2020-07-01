@@ -831,7 +831,7 @@ font-family: "FontAwesome";
         left: -16%; } }
     @media (min-width: 992.98px) {
       .intro__btn:after {
-        left: -38%; } }
+        left: -43%; } }
   .intro__btn:hover .intro__btn-icon, .intro__btn:hover .important__btn-icon {
     -webkit-transform: translateX(30px);
     -ms-transform: translateX(30px);
