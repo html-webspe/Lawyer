@@ -1,26 +1,35 @@
 @font-face {
-   font-family: 'SF UI Display';
-   src: url('../fonts/SFUIDisplay-Regular.woff2') format('woff2'),
-      url('../fonts/SFUIDisplay-Regular.woff') format('woff');
+   font-family: 'Circe';
+   src: url('../fonts/Circe-Regular.eot');
+   src: local('Circe'), local('Circe-Regular'),
+      url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Circe-Regular.woff') format('woff'),
+      url('../fonts/Circe-Regular.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
    font-display: swap;
 }
 
 @font-face {
-   font-family: 'SF UI Display';
-   src: url('../fonts/SFUIDisplay-Medium.woff2') format('woff2'),
-      url('../fonts/SFUIDisplay-Medium.woff') format('woff');
-   font-weight: 500;
+   font-family: 'Circe';
+   src: url('../fonts/Circe-Bold.eot');
+   src: local('Circe Bold'), local('Circe-Bold'),
+      url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Circe-Bold.woff') format('woff'),
+      url('../fonts/Circe-Bold.ttf') format('truetype');
+   font-weight: bold;
    font-style: normal;
    font-display: swap;
 }
 
 @font-face {
-   font-family: 'SF UI Display';
-   src: url('../fonts/SFUIDisplay-Bold.woff2') format('woff2'),
-      url('../fonts/SFUIDisplay-Bold.woff') format('woff');
-   font-weight: bold;
+   font-family: 'Circe';
+   src: url('../fonts/Circe-ExtraBold.eot');
+   src: local('Circe ExtraBold'), local('Circe-ExtraBold'),
+      url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Circe-ExtraBold.woff') format('woff'),
+      url('../fonts/Circe-ExtraBold.ttf') format('truetype');
+   font-weight: 800;
    font-style: normal;
    font-display: swap;
 }

@@ -70,7 +70,7 @@
    }
 
    &__item-leble {
-      @include adaptiv-font(20, 14);
+      @include adaptiv-font(18, 12);
       margin-bottom: 33px;
       position: relative;
       z-index: 3;

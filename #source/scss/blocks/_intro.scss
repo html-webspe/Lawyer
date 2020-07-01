@@ -81,8 +81,8 @@
    &__btn {
       @include adaptiv-font(30, 14);
       color: #ffffff;
-      font-family: "SF UI Display";
-      font-weight: 700;
+      font-family: "Circe";
+      font-weight: 800;
       display: block;
       padding: 42px 0 42px 0;
       position: relative;
@@ -153,17 +153,20 @@
    }
 }
 
-.text-typing {
-   --duration: 3s;
-   width: 40em;
-   overflow: hidden;
-   white-space: nowrap;
-   animation: typing var(--duration) steps(50, end) backwards;
+@media (min-width:1200px) {
+   .text-typing {
+      --duration: 3s;
+      width: 40em;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing var(--duration) steps(50, end) backwards;
+   }
+
+   .text-typing:nth-child(2) {
+      animation-delay: var(--duration);
+   }
 }
 
-.text-typing:nth-child(2) {
-   animation-delay: var(--duration);
-}
 
 
 
