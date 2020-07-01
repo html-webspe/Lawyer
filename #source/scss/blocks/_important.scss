@@ -16,10 +16,14 @@
 .important-title {
    color: #ffffff;
    @include adaptiv-font(36, 24);
-   margin-bottom: 30px;
    text-align: left;
    max-width: 704px;
    text-transform: uppercase;
+
+   @media (max-width:$md3+px) {
+      //margin-bottom: 30px;
+
+   }
 }
 
 .important-text {

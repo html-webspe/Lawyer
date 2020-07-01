@@ -1175,7 +1175,6 @@ font-family: "FontAwesome";
 
 .important-title {
   color: #ffffff;
-  margin-bottom: 30px;
   text-align: left;
   max-width: 704px;
   text-transform: uppercase; }
@@ -1418,7 +1417,7 @@ font-family: "FontAwesome";
     width: 90%;
     height: 100%;
     background-color: #262837;
-    opacity: 0.24; }
+    opacity: 0.64; }
 
 @media (min-width: 767.98px) {
   .callback__body {
