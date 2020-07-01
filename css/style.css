@@ -1177,7 +1177,8 @@ font-family: "FontAwesome";
   color: #ffffff;
   text-align: left;
   max-width: 704px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 0; }
   @media (max-width: 767.98px) {
     .important-title {
       font-size: calc(24px + 20.4*((100vw - 320px) / 1903)); } }
